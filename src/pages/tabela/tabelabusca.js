@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Header from '../../componentes/header'
-import logocasa from '../../assets/icon-home.svg'
-import logosair from '../../assets/icon-power-off.svg'
 import '../../tabelabusca.css'
 
 
