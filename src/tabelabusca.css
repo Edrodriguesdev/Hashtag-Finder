@@ -1,0 +1,518 @@
+/* CSS GERAL */
+/* background 
+---------------*/
+
+body { background-image: url("./assets/login-bg.jpg"); 
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* FIM background */
+
+/*  Logo Hashtagfinder 
+----------------------*/
+
+header {
+    display: flex;
+    margin: 0 0 0 3%;
+}
+.logo {
+    color: white;
+    font-size: 16px;
+}
+
+h1.logonormal {
+    font-weight: normal;
+}
+
+
+/* FIM Loho Hashtagfinder */
+/* BUSCA REALIZADA */
+h2.logo {
+    color: #fff;
+    font-size: 23px;
+}
+
+
+.buscarealizada{
+    width: 90%;
+    height: 25%;
+    margin-left: 8%;
+
+}
+
+/* FIM BUSCA REALIZADA*/
+
+/* TABELA BUSCA*/
+
+th, td {
+    padding: 2% 0% 1% 0%;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.tabelabusca{
+    width: 82%;
+    height: auto;
+    margin-left: 8%;
+    background-color: #FFF; 
+    border-radius: 10px;
+}
+
+.espacotabela {
+width: 100%;    
+padding: 0% 0% 1% 0%;
+border-radius: 10px;
+margin-top: 2%;
+}
+
+.espacotabela th {
+    color: #3633F7;
+    background-color: rgba(233, 233, 233, 0.938);
+    padding: 15px 35px;
+    line-height: 35px;  
+}
+
+
+.espacotabela td{
+  font-size: 16px;
+  width: 90%;
+  background-color: #FFF;
+  color: blueviolet;
+  line-height: 23px;
+  padding: 2% 3%;
+  
+}
+
+.hash {
+    text-align: left;
+    margin-left: 2%; 
+}
+
+/* FIM TABELA BUSCA*/
+
+#menu {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% 1%;
+    
+}
+
+#menu ul {
+    width: 100%;
+    list-style: none; 
+    padding-left: 67%;
+}
+
+#menu ul li {  
+    margin-right: 1%;
+    display: inline-flex;
+    
+}
+
+#menu ul li a {
+    padding: 6px 10px;
+    line-height: 20px;
+    /* visual do link */
+    text-decoration: none;
+}
+
+#menu img {
+    width: 15%;
+   
+}
+
+.home {
+
+    text-align: center;
+    width: 85px;
+    height: 20px;
+    border-radius: 50px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #d842bd; 
+    
+}
+
+.sair {
+    background-color: #3633F7;
+}
+
+/* FIM CSS GERAL */
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1184px) and (min-width: 820px) {
+
+    .logo {
+        color: white;
+        font-size: 14px;
+    }
+    #menu {
+        display: flex;
+        width: 100%;
+        margin: 0% 1%;
+    }
+
+    #menu ul{
+        width: 100%;
+        margin-top: 2%;
+        padding-left: 60%;
+        
+        
+    }
+
+    #menu ul li {
+        margin: 0% 1%;
+        display: inline-flex;
+    }
+
+    .buscarealizada {
+        margin-left: 8%;
+        font-size: 18px;
+    }
+
+    .tabelabusca{
+        width: 80%;
+        margin-left: 9%;
+        background-color: #FFF;
+        border-radius: 10px;
+    }
+    
+    .espacotabela {
+    width: 100%;    
+    padding: 0% 0% 1% 0%;
+    border-radius: 10px;
+    margin-top: 1%;
+    }
+    
+    .espacotabela th {
+
+        background-color: rgba(233, 233, 233, 0.938);
+        padding: 15px 35px;
+        line-height: 30px;  
+    }
+    
+    .espacotabela td{
+        width: 100%;
+        font-size: 16px;
+        padding: 3%;
+        line-height: 15px;
+        
+      }
+    
+}
+
+@media screen and (max-width: 941px) and (min-width: 820px){
+    #menu ul{
+        width: 100%;
+        margin-top: 2%;
+        padding-left: 50%;
+ 
+    }
+
+ }
+
+
+@media screen and (max-width: 819px) and (min-width: 601px){
+
+    #menu {
+        width: 100%;
+        margin: 0% 1%;
+    }
+
+    #menu ul {
+        display: flex;
+        width: 100%;
+        margin: 2%;
+    }
+
+    #menu ul li {
+        padding-left: 2%;
+        display: inline-flex;
+    }
+
+    .buscarealizada {
+        margin-left: 45%;
+        font-size: 18px;
+    }
+
+    .tabelabusca {
+        margin-left: 14%;
+        width: 90%;
+
+    }
+
+    .espacotabela {
+        width: 100%;    
+        padding: 0% 0% 1% 0%;
+        border-radius: 10px;
+        margin-top: 1%;
+        }
+        
+        .espacotabela th {
+            background-color: rgba(233, 233, 233, 0.938);
+            padding: 15px 25px;
+            line-height: 30px;  
+        }
+        
+        .espacotabela td {
+          font-size: 16px;
+          width: 100%;
+          padding: 3%;
+          line-height: 20px;
+        }
+    
+}
+
+
+@media screen and (max-width: 600px) and (min-width: 451px){
+
+    #menu {
+        width: 100%;
+        margin: 0% 1%;
+        
+    }
+
+    #menu ul{
+        display: flex;
+        width: 100%;
+        margin: 2%;
+        padding-left: 38%;
+        text-align: center;
+    }
+
+    #menu ul li {
+        padding-left: 2%;
+        display: inline-flex;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .buscarealizada {
+        margin-left: 30%;
+        font-size: 18px;
+    }
+
+    .tabelabusca {
+        margin-left: 14%;
+        width: 90%;
+
+    }
+
+    .espacotabela {
+        width: 100%;    
+        padding: 0% 0% 1% 0%;
+        border-radius: 10px;
+        margin-top: 1%;
+        }
+        
+        .espacotabela th {
+            background-color: rgba(233, 233, 233, 0.938);
+            padding: 5% 3%;
+            line-height: 30px;  
+        }
+        
+        .espacotabela td{
+          font-size: 16px;
+          width: 90%;
+          padding: 5% 4%;
+          line-height: 10px;
+          
+        }
+
+    .hash {
+        text-align: left;
+        margin-right: 10%; 
+    }
+
+    
+}
+
+@media screen and (max-width: 450px) and (min-width: 375px){
+
+    #menu {
+        width: 100%;
+        margin: 0% 1%;
+        
+    }
+
+    #menu ul{
+        width: 100%;
+        margin-top: 4%;
+        padding-left: 8%;
+        display: flex;
+        text-align: center;
+    }
+
+    #menu ul li {
+        padding-left: 1%;
+        display: inline-flex;
+    }
+
+
+    .logo {
+        font-size: 10px;
+        
+    }
+
+    .buscarealizada {
+        margin-left: 3%;
+        font-size: 14px;
+    }
+
+    .tabelabusca {
+        width: 95%;
+        margin-left: 2%;
+    }
+
+    .espacotabela {
+        width: 100%;    
+        padding: 0% 0% 1% 0%;
+        border-radius: 10px;
+        margin-top: 1%;
+        }
+        
+        .espacotabela th {
+            color: #3633F7;
+            background-color: rgba(233, 233, 233, 0.938);
+            padding: 3%;
+            line-height: 30px;  
+        }
+
+        .espacotabela td {
+          font-size: 16px;
+          width: 90%;
+          background-color: #FFF;
+          color: blueviolet;
+          padding: 5% 4%;
+          line-height: 10px;
+          
+        }
+
+    .hash {
+        text-align: left;
+        margin-right: 10%; 
+    }
+
+    .home {
+
+        text-align: center;
+        border-radius: 50px;
+        color: white;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        background-color: #d842bd; 
+        
+    }
+
+    .sair {
+        background-color: #3633F7;
+    }
+
+}
+
+@media screen and (max-width: 374px) and (min-width: 320px) {
+
+    #menu {
+        width: 80%;
+        align-items: center;
+        margin: 0%;
+        
+    }
+
+    #menu ul{
+        margin: 1%;
+        display: flex;
+        align-items: center;
+        padding-left: 8%;
+    }
+
+    #menu ul li {
+        width: 80%;
+        padding-left: 1%;
+        font-size: 8px;
+    }
+
+    #menu ul li a {
+        padding: 4px 8px;
+    }
+
+    .logo {
+        font-size: 8px;
+    }
+
+    .buscarealizada {
+        margin-left: 16%;
+        font-size: 14px;
+    }
+
+    .tabelabusca {
+        margin-left: 3%;
+        width: 95%;
+    }
+
+    .espacotabela {
+        width: 100%;    
+        padding: 0% 0% 1% 0%;
+        border-radius: 10px;
+        margin-top: 1%;
+        }
+        
+        .espacotabela th {
+            color: #3633F7;
+            background-color: rgba(233, 233, 233, 0.938);
+            padding: 3%;
+            line-height: 30px;  
+        }
+        
+        .espacotabela td{
+          font-size: 16px;
+          width: 100%;
+          background-color: #FFF;
+          color: blueviolet;
+          padding: 5% 4%;
+          line-height: 20px;
+          
+        }
+
+        .home {
+
+            text-align: center;
+            border-radius: 50px;
+            color: white;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #d842bd; 
+            
+        }
+
+        .sair {
+            background-color: #3633F7;
+        }
+
+    .hash {
+        text-align: left;
+        margin-right: 10%; 
+    }
+
+}
+    
+/* FIM --MEDIA QUERY */
+
