@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "hashtagfinder",
+=======
+  "name": "app",
+>>>>>>> 601b49ca0f4008a3af40c3db93dd7193382754d6
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +12,10 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+<<<<<<< HEAD
     "react-router-dom": "^5.2.0",
+=======
+>>>>>>> 601b49ca0f4008a3af40c3db93dd7193382754d6
     "react-scripts": "3.4.3"
   },
   "scripts": {
