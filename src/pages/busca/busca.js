@@ -16,7 +16,7 @@ class Busca extends React.Component {
                 <form>
                     <input type="text" value={this.state.value} />
                 </form>
-                <input type="submit" value="Trazer dados" />
+                <input type="submit" placeholder="Trazer dados" />
             </div>
         )
     }

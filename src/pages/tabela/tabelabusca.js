@@ -7,7 +7,7 @@ class Tabela extends React.Component {
     render() {
       return (
         <div>
-        <Header />    
+        <Header />
           <div className='buscarealizada'>
             <h2 className='logo'>Buscas realizadas</h2>
           </div>
