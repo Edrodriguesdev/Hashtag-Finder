@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+	margin: 0;
+	justify-content: center;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/*inicio da parte do Rodrigo*/
+
+/*classe da imagem*/
+.divLeft{
+	height:32vh;
+	min-height: 220px;
+	background-image: url(../assets/about-bg.jpg);
+	background-size: cover;	
+	width: 100%;
+	top:0;
+	left:0;
+	opacity: 1;
+	position:relative;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	z-index: 1;
+}
+/*com o seletor chamo, faço referencia através do id a minha tag de imagem*/
+#photo {
+    width: 100%;
+	height: 422px;
+	margin: auto;
+}
+/*classe do texto, posicionando o texto sobre a tela*/
+.textDiv{	
+	top: 60%;
+	width:100%;
+	height:98px;
+	
+	text-align: left;
+	color:var(--unnamed-color-ffffff);
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	font: Bold 30px/35px Rubik;
+	font-size: 3vw;
+	opacity: 1;
+	position: absolute;
+}
+#spacetext{
+	margin-left: 7%;
+}
+/*fim da parte do Rodrigo*/
+
+/*inicio da parte do Felipe*/
+
+/* configuração da div pai onde está a div da descrição e div da imagem*/
+#sobre{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	margin: 80px auto 80px auto;
+	padding: 0px 0px 0px 0px;
+}
+/*definição do tamanho da div da descrição*/
+#descricaoSobre{
+	width: 40%;
+	margin-left: 7%;
+	padding-top: 1%;
+}
+/* caracteristicas do texto do titulo e paragráfo */
+#descricaoSobre>h2{
+	font: Bold 35px/35px Rubik;
+	font-size: 3vw;
+	color: #3634f7;
+	margin-left: 0vw;
+}
+#descricaoSobre>p{
+	font-family: 'Rubik';
+	font-size: 1.6vw;
+	line-height: 2vw;
+	text-align: justify;
+	width: 100%;
+	margin:0 auto;
+	margin-top: 4vh ;
+
+}
+/* ajuste da posição da imagem em relação ao topo pai*/
+#imagemSobre{
+	width: 40%; 
+	height: auto;
+	margin:0 auto;
+	display: flex;
+	align-items: center;
+	margin-top: 3%;
+	margin-right: 5%;
+}
+#imagemSobre>img{
+	width: 100%; 
+	height: auto;
+	max-width: 900px;
+	margin:auto;
+}
+
+/**/
+
+#equipe{
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0px auto 0px auto;
+	justify-content: space-around;
+	
+}
+
+#quem{
+	width: 100%;
+	height: 25px;
+	font: Bold 35px/35px Rubik;
+	font-size: 35px;
+	color: #3634f7;
+	margin: 0px auto 35px auto;
+	
+}
+
+#quem>h2{
+	font: Bold 35px/35px Rubik;
+	font-size: 3vw;
+	margin-left: 7%;
+	margin-top: -7%;
+}
+
+.integrantesDaEquipe{
+	width:20%;
+	min-width: 220px;
+	max-width: 600px;
+	height: 40%;
+	max-height: 740px;
+	box-shadow: 0px 15px 25px #5538EE14 ;
+	border-radius: 10px;
+	border: 1px #5638ee1c;
+	border-style: solid;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+
+#integrante1{
+	margin-left: 5%;
+}
+#integrante4{
+	margin-right: 5%;
+}
+
+.icone{
+	margin: 0vh 1vw 2vh 1vw;
+	size: 1vh;
+}
+
+.perfil{
+	border-radius: 50%;
+	margin-top: 3vh;
+}
+
+.integrantesDaEquipe>h2{
+	font-family: 'Rubik';
+	font-size: 2vw;
+	margin: 10px 0px 20px 0px;
+}
+
+.integrantesDaEquipe>p{
+	font-family: 'Rubik';
+	font-size: 1.5vw;
+	line-height: 1em;
+	text-align: center;
+	width: 90%;
+	margin: 0vw 0px 1vw 0px;
+}
+
+.footer{
+	height: 90px;
+	margin-top: 50px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #D842BD 0% 0% no-repeat padding-box;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Rubik';
+    font-weight: normal;
+    font-size: 1em;
+}
+
+@media screen and (min-width: 1900px){
+	.textDiv{	
+		top: 60%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	/*ajuste para tablets*/
+	#equipe{
+		display: flex;
+		flex-direction:row;
+		flex-wrap: wrap;
+		width: 70%;
+		justify-content: space-between;
+	}	
+	.integrantesDaEquipe{
+		margin:0vw;
+	}
+	#integrante1{
+		margin-left: 0vw;
+	}
+	#integrante3{
+		top: 3vh;
+	}
+	#integrante4{
+		margin-right: 0%;
+	}
+	#quem{
+		display: flex;
+		justify-content: space-around;
+	}
+	#quem>h2{
+		margin-right: 7vw;	
+	}
+	
+}
+
+@media screen and (max-width: 650px){
+body{
+	overflow-x: hidden;
+}
+#divleft{
+	width: 100%;
+	height: 200px;
+	left: 0px;
+	background-image: url(../assets/about-bg.jpg);
+	background-size: cover;
+}
+.textDiv{
+	left: 0vw;
+	font-size: 30px;
+	width: 90%;
+}
+#textDiv>h2{
+	width: 90%;
+
+}
+#sobre{
+	flex-direction: column;
+	width: 90%;
+	justify-content: center;
+
+}
+#descricaoSobre{
+	width: 100%;
+	margin-left: 0vw;
+	
+}
+/* caracteristicas do texto do titulo e paragráfo */
+#descricaoSobre>h2{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font: Bold 35px/35px Rubik;
+	font-size: 30px;
+	color: #3634f7;
+}
+
+#descricaoSobre>p{
+	font-family: 'Rubik';
+	font-size: 20px;
+	line-height: 30px;
+	text-align: justify;
+	margin: 5px;
+}
+
+#imagemSobre{
+	margin-top: 50px;
+	width: 90%; 
+	height: auto;
+	
+}
+#imagemSobre>img{
+	margin-top: 10px;
+	margin-left: 0vw;
+	width: 100%; 
+	height: auto;
+	
+}
+
+#equipe{
+	flex-direction: column;
+	width: 340px;
+	justify-content: center;
+}
+#quem{
+	width: 340px;
+	height: 25px;
+	font: Bold 35px/35px Rubik;
+	font-size: 20px;
+	color: #3634f7;
+	margin: 0px auto 35px auto;
+	display: flex;
+	justify-content: center;
+}
+
+#quem>h2{
+	margin-left: 3vw;
+	font-size: 2em;
+	
+}
+.integrantesDaEquipe{
+	width: 310px;
+	height: 450px;
+	margin-left: 0vw;
+	margin-top: 2em;
+}
+.integrantesDaEquipe>h2{
+	font-size: 25px;
+}
+.integrantesDaEquipe>p{
+	font-size: 15px;
+	width: 250px;
+}
+
+.perfil{
+	width: 150px;
+}
+
+#integrante1{
+	margin-left: 0vw;
+}
+}
+
+
