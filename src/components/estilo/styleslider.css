@@ -1,0 +1,519 @@
+/**resetando a pagina**/
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Rubik', sans-serif;}
+
+.clear{
+	clear: both;
+}
+
+.App {
+	font-family: sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: vh;
+	max-width: 1686px;
+	margin: auto;
+  }
+/**Estilizando o plugin Slick**/
+
+.rec-pagination{
+	list-style-type: none;
+	text-align: center;
+	position: relative;
+	margin: 0 auto;
+	
+	
+}
+
+.rec-pagination button{
+	display: inline-block;
+	margin: 0 7px;
+}
+
+.rec-pagination button{
+	outline: 0;
+}
+
+.rec-pagination button{
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+	color: #CBCBCB;
+	border-width: 0;
+	background: #CBCBCB;
+	opacity: 1;
+	box-shadow: none;   
+	cursor: pointer;
+}
+.brcpxa:hover,.brcpxa:focus{
+	cursor: pointer !important;
+    box-shadow:none !important;
+}
+.ikyGAt:hover, .ikyGAt:focus {
+    cursor: pointer;
+    box-shadow: 0 0 0px 0px #ffffff !important;
+}
+
+
+.rec-dot_active{
+	background: #3634F7 !important;
+	color: #3634F7 !important;
+}
+
+.slick-slide:focus{outline:none;}
+
+.rec-arrow-left{
+	background-image: url('../assets/mov_esquerda.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	color: rgba(255, 255, 255, 0.1);
+	border: none !important;
+  	background-color: white;
+  	width:50px !important;
+	height:64px !important;
+  	border-radius:32px !important;
+	box-shadow: 0 0 10px rgba(138,74,211,0.4);
+	margin-bottom:45px !important;
+	margin-left: 10px;
+	background-color: #ffffff !important;
+	
+}
+.chowzb{
+	color: transparent !important;
+}
+.rec-arrow-left>font{
+	display: none !important;
+}
+.rec-arrow-right{
+	background-image: url('../assets/mov_direita.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	color: rgba(255, 255, 255, 0.1);
+  	background-color: white;
+  	width:50px !important;
+	height:64px !important;
+  	border-radius:32px !important;
+	box-shadow: 0 0 10px rgba(138,74,211,0.4);
+	margin-bottom: 45px !important;
+	margin-right: 10px;
+	background-color: #ffffff !important;
+
+}
+.chowzb{
+	box-shadow: 0 0 10px 0 rgba(138,74,211,0.4) !important	
+}
+.chowzb:hover:enabled, .chowzb:focus:enabled {
+    box-shadow: 0 0 2px 0 rgba(138,74,211,0.4) !important;
+}
+.rec-arrow-right>font{
+	display: none;
+}
+
+/**estilizando titulo do resultado de busca**/
+.chamada{
+	max-width: 1280px;
+	margin: 82px auto;
+}
+
+.chamada h1{
+font-weight: bold;
+	font-size: 32px;
+	color: #3634F7;
+	text-align: center;
+}
+
+/**Estilizando o modal e o zoom**/
+#modal_img{
+    width: 80%;
+    transform: scale(0);
+    transition: all linear .3s;
+
+}
+
+.modal_active #modal_img{
+    transform: scale(1);
+}
+.modal{
+    top: 2%;
+    margin:0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+
+.modal_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal_content img{
+	width: 100%;
+	height: 100%;
+}
+
+#bt_close{
+    color:#fff;
+    background-color: #000;
+    position: absolute;
+    top:10px;
+    right: 15px;
+    padding: 5px 10px;
+    font-size: 25px;
+    border:solid 1px #fff;
+    transition: all ease-out .4s;
+    cursor: pointer;
+}
+#bt_close:hover{
+    background-color: #f00;
+}
+
+.modal_active{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+/**estilizando o slider de imagens**/
+.sessaoSlider{
+	max-width:1686px;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.flexImg{
+	max-width: 1686px;
+	display: flex;
+
+}
+.imgSingle{
+	width: 100%;
+	height: 280px;
+    overflow: hidden;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border:10px solid white;
+	border-radius: 21px;
+	opacity: 1;
+
+}
+
+/**estilizando o texto de usuario**/
+.texto{
+	text-align: left;
+	left: 20px;
+	position: relative;
+	bottom: 80px;
+
+}.texto p{
+	color: white;
+	padding:2px 4% 2px 0;
+}
+
+.texto .nomeUsuario{
+	font-size: 17px;
+}
+
+.texto .usuarioPost{
+	font-weight: bolder;
+	font-size: 21px;
+}
+
+/**Estilizando sessão tweets usuarios **/
+.tweetUsuarios{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 1686px;
+	margin: 100px auto 10px auto;
+}
+
+.tweet{
+	align-items: center;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 20px 0;
+	max-width: 735px;
+	max-height: 230px;
+	border: 1px solid #5538EE24;
+	border-radius: 15px;
+	box-shadow: 0px 5px 10px #5538EE14;
+}
+
+.tweet img{
+	position: relative;
+	top: 35px;
+	left: 20px;
+	max-width: 80px;
+	max-height: 80px;
+	border-radius: 40px;
+}
+
+.tweet h1{
+	font-size: 27px;
+	padding-left: 50px;
+	opacity: 1;
+}
+
+.tweet h3{
+	padding-left: 15px;
+	font-size: 20px;
+	color: #292929;
+	opacity: 0.43;
+}
+
+.tweet p{
+	display: block;
+	padding:0 82px 0 135px;
+	width:100%;
+	max-height: 120px;
+}
+
+.tweet button{
+	display: inline-block;
+	width: 160px;
+	height: 20px;
+	font-size: 17px;
+	margin:10px 10px 10px 135px;
+	color: #3634F7;
+	background-color: white;
+	border:none;
+}
+
+	/**Estilizando footer**/
+footer{
+	width: 100%;
+    height: 70px;
+    background: #D842BD 0% 0% no-repeat padding-box;
+    display: flex;
+	margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Rubik';
+}
+
+@media screen and (max-width: 1280px) and (min-width: 1025px){
+	.chamada{
+		padding-top: 40px;
+	}
+
+	.flexImg{
+		margin: 0 auto;
+		max-width: 1100px;
+		display: flex;
+	}
+
+	.imgSingle{
+		max-width:250px;
+		max-height:200px;
+	margin: 0 auto;
+	max-width: 1100px;
+	display: flex;
+	}
+
+	.imgSingle{
+	max-width:250px;
+	max-height:200px;
+	
+	}
+
+	.texto .nomeUsuario{
+		font-size: 13px;
+	font-size: 13px;
+}
+
+	.texto .usuarioPost{
+		font-weight: normal;
+		font-size: 16px;
+	}
+
+	.tweetUsuarios{
+		max-width: 1100px;
+	}
+
+	.tweet{
+		max-width: 500px;
+		max-height: 180px;
+	}
+
+	.tweet h1{
+		font-size: 20px;
+		padding-left: 50px;
+		opacity: 1;
+	}
+
+	.tweet h3{
+		padding-left: 13px;
+		font-size: 20px;
+		color: #292929;
+		opacity: 0.43;
+	max-width: 500px;
+	max-height: 180px;
+	}
+
+	.tweet p{
+		display: block;
+		padding:0 0 0 135px;
+		width:100%;
+		max-height: 92px;
+	}
+
+	.tweet button{
+		width: 140px;
+		font-size: 15px;
+		padding-top:0;
+		margin:10px 0 10px 135px;
+		text-align: left;
+	}
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px){
+
+    footer{
+        height: 50px;
+        background: #D842BD 0% 0% no-repeat padding-box;
+        display: flex;   
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-family: 'Rubik';
+        font-weight: normal;
+        font-size: 0.8em;
+    }
+
+
+	.flexImg{
+		margin: 0 auto;
+		max-width: 800px;
+		display: flex;
+	}
+
+	.imgSingle{
+		max-width:200px;
+		max-height:200px;
+	
+	}
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 581px){
+	.chamada{
+		max-width: 768px;
+	}
+
+	.chamada h1{
+		font-size: 25px;
+	}
+
+	.sessaoSlider{
+		margin: 0 auto;
+		width: 700px;
+}
+
+	.flexImg{
+		margin: 0 auto;
+		width: 100%;
+		display: flex;
+		border:none;
+	}
+
+	.imgSingle{
+		width: 100%;
+	
+	}
+
+	.slick-dotted ul{
+   		list-style-type: none;
+   		text-align: center;
+   		position: absolute;
+		margin:0 auto;
+   		bottom:0;
+   }
+
+	.slick-dotted li{
+   		display: inline-block;
+   		margin: 0 2px;
+	}
+
+	.texto .nomeUsuario{
+		font-size: 13px;
+	}	
+
+	.texto .usuarioPost{
+		font-weight:normal;
+		font-size: 14px;
+	}
+
+	.tweetUsuarios{
+		max-width: 768px;
+	}
+
+	.tweet{
+		width: 90%;
+	}
+
+}
+
+@media screen and (max-width: 580px){
+	.flexImg{
+		margin: 0 auto;
+		max-width: 500px;
+		display: flex;
+		border:none;
+	}
+
+	.imgSingle{
+		width: 100%;
+	
+	}
+
+	.tweetUsuarios{
+		max-width: 580px;
+	}
+
+	.slick-dotted ul{
+   		list-style-type: none;
+   		text-align: center;
+   		position: absolute;
+		margin:0 auto;
+   		bottom:0;
+   }
+
+	.slick-dotted li{
+   		display: inline-block;
+   		margin: 0 auto;
+		padding:0 2px;
+	}
+
+	.tweet{
+		width: 80%;
+	}
+
+	.tweet h1{
+		font-size: 20px;
+	}
+
+	.tweet h3{
+		padding-left: 10px;
+	}
+
+	.tweet p{
+		font-size: 13px;
+	}
+
+	.tweet button{
+		font-size: 13px;
+		
+	}
+
+}
