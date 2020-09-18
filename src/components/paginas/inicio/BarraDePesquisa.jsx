@@ -1,10 +1,14 @@
 import React, { Component } from "react"
 import "../../estilo/menusBusca.css"
+import Carrossel from './Carrossel';
 
 export default class BarraDePesquisa extends Component{
     constructor(props){
         super(props)
-        this.state = {value: ''};
+        this.state = {
+            value: '',
+            statuses: []
+        };
         this.digitarPesquisa = this.digitarPesquisa.bind(this)
         this.validar = this.validar.bind(this)
     }
@@ -20,22 +24,48 @@ export default class BarraDePesquisa extends Component{
         event.preventDefault();
         if(this.state.value.length < 3){
             alert ('Não há caracteres o suficiente para resultar numa busca.');
+            return
         }
         if(this.state.value.length > 140){
             alert ('Número máximo de caracteres atingido.');
+            return
         }
+
+        var myHeaders = new Headers();
+        myHeaders.append("authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAFlKHgEAAAAApBW4nRyRkiogluzAbXlS4KuHlMU%3DFcR7r8N19LRnMHLVmYlFsod6Be6zUvZD2rxATotl6mLPAh2UEX");
+
+        var requestOptions = {
+            method: 'GET',
+            headers: myHeaders
+        };
+
+        fetch("https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q="+this.state.value+"&result_type=popular", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            // alert("Funcionou!");
+            // console.log(result);
+            this.setState({
+                statuses: result.statuses
+            })
+
+        })
+        .catch(error => console.log('error', error));
+
     }
 // Barra de pesquisa
     render(){
         return(
-        <form name="formUser" onSubmit={this.validar} action="#">
-            <section id="pesq">
-            <section className="barPesquisa">
-                <button className="botao" type="submit" id="botao3"/>
-                <input type="search" value={this.state.value} onChange={this.digitarPesquisa} id="hashTag" className="form-control" placeholder="Buscar..." />
-            </section>
-            </section>
-        </form>
+            <>
+                <form name="formUser" onSubmit={this.validar} action="#">
+                    <section id="pesq">
+                    <section className="barPesquisa">
+                        <button className="botao" type="submit" id="botao3"/>
+                        <input type="search" value={this.state.value} onChange={this.digitarPesquisa} id="hashTag" className="form-control" placeholder="Buscar..." />
+                    </section>
+                    </section>
+                </form>
+                <Carrossel statuses={this.state.statuses} />
+            </>
         );
     }
 }

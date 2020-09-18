@@ -4,7 +4,6 @@ import Rodape from '../comum/Rodape';
 import PlanoDeFundo from '../inicio/PlanoDeFundo';
 import BarraDePesquisa from '../inicio/BarraDePesquisa';
 import MensagemErro from '../inicio/MensagemErro';
-import Carrossel from './Carrossel';
 
 class Inicio extends React.Component {
     render (){
@@ -13,7 +12,6 @@ class Inicio extends React.Component {
             <Topo/>
             <PlanoDeFundo/>
             <BarraDePesquisa/>
-            <Carrossel/>
             <MensagemErro/>
             <Rodape/>
         </section>

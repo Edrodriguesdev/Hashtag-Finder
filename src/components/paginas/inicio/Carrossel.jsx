@@ -22,79 +22,87 @@ const breakPoints = [
   { width: 1200, itemsToShow: 5 }
 ];
 
-function Carrossel() {
-  return (
-    <div>    
-        <div className="chamada">
-            <h1>Exibindo os 10 resultados mais recentes para #natureza</h1>
-        </div>   
-        <div className="App">
-            
-            <Carousel className="sessaoSlider" breakPoints={breakPoints}>
-                <Item className="imgUnica">
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img1}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img2}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img3}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img4}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img5}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img6}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img7}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img8}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img9}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-                <Item>
-                <div className="imgUnica">
-                    <img className="imgSingle" src={img10}/>
-                    <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
-                </div>
-                </Item>
-            </Carousel>
-        </div>
-    </div>      
-  );
+class Carrossel extends React.Component {
+  render() {
+
+    console.log(this.props.statuses)
+    return (
+      <div>    
+          <div className="chamada">
+              <h1>Exibindo os 10 resultados mais recentes para #natureza</h1>
+          </div>   
+          <div className="App">
+              
+              <Carousel className="sessaoSlider" breakPoints={breakPoints}>
+                  {
+                    this.props.statuses.map((tweet) => 
+                    <Item className="imgUnica">
+                      <div className="imgUnica">
+                          <img className="imgSingle" src={tweet.user.profile_image_url}/>
+                  <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@{tweet.user.screen_name}</p></div>
+                      </div>
+                    </Item>)
+                  }
+
+                  {/* <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img2}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img3}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img4}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img5}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img6}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img7}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img8}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img9}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item>
+                  <Item>
+                  <div className="imgUnica">
+                      <img className="imgSingle" src={img10}/>
+                      <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@twitterusername1</p></div>
+                  </div>
+                  </Item> */}
+              </Carousel>
+          </div>
+      </div>      
+    );
+  }
 }
 
 export default Carrossel
