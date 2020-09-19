@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "../../estilo/menusBusca.css"
 import Carrossel from './Carrossel';
+import Postagens from "./Postagens";
 
 export default class BarraDePesquisa extends Component{
     constructor(props){
@@ -65,6 +66,7 @@ export default class BarraDePesquisa extends Component{
                     </section>
                 </form>
                 <Carrossel statuses={this.state.statuses} />
+                <Postagens statuses={this.state.statuses} />
             </>
         );
     }

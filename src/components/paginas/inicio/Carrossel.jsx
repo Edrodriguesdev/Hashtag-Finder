@@ -25,10 +25,15 @@ class Carrossel extends React.Component {
               
               <Carousel className="sessaoSlider" breakPoints={breakPoints}>
                   {
-                    this.props.statuses.map((tweet) => 
+                    this.props.statuses.filter((tweet) => {
+                      if (tweet.extended_entities && tweet.extended_entities.media &&  tweet.extended_entities.media.length > 0 ) {
+                          return true;
+                    }
+                    return false;
+                  }).map((tweet) => 
                     <Item className="imgUnica">
                       <div className="imgUnica">
-                          <img className="imgSingle" src={tweet.user.profile_image_url}/>
+                          <img className="imgSingle" src={tweet.extended_entities.media[0].media_url}/>
                   <div className="texto"><p className="nomeUsuario">Postado por:</p><p className="usuarioPost">@{tweet.user.screen_name}</p></div>
                       </div>
                     </Item>)
