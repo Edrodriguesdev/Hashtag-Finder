@@ -1,53 +1,74 @@
-import React, { Component } from 'react'
+import React,  {useState, useEffect} from 'react'
 import Header from '../../componentes/header'
 import '../../tabelabusca.css'
+import Axios from 'axios'
+import Posts from '../../componentes/Posts'
+import Paginacao from '../../componentes/paginacao'
 
 
-class Tabela extends React.Component {
-    render() {
-      return (
-        <div>
+const Tabela = () => {
+    const [postagens, setPostagens] = useState([]);
+    const [carregando, setCarregando] = useState(false);   
+    const [paginaAtual, setPaginaAtual] = useState(1);
+    const [postagensPerPage, setPostPerPage]= useState(5); 
+
+    useEffect(() => {
+        const fetchPostagem = async () => {
+            setCarregando(true);
+            const res = await Axios.get('https://api.airtable.com/v0/appVIbIe3dgo7JRR8/Buscas?api_key=keynmzEKs3B99kRBy');
+            setPostagens(res.data.records);
+            setCarregando(false);
+        }
+
+        fetchPostagem();
+    }, []);
+    console.log(postagens)
+    const indexDoUltimoPost = paginaAtual * postagensPerPage;
+    const indexDoPrimeiroPost = indexDoUltimoPost - postagensPerPage;
+    const postagensAtual = postagens.slice(indexDoPrimeiroPost, indexDoUltimoPost);
+
+    const paginar = numPaginas => setPaginaAtual(numPaginas);
+
+
+
+    return (
+    <div>
         <Header />
-          <div className='buscarealizada'>
-            <h2 className='logo'>Buscas realizadas</h2>
-          </div>
-            <div className='tabelabusca'> 
-              <table className='espacotabela' id='paginacao' cellSpacing='0'>
-                  <thead>
-                    <tr>
-                        <th className='hash' style={{borderBottomLeftRadius: '10px', borderTopLeftRadius: '10px'}}>Hashtag</th>
-                        <th>Data</th>
-                        <th className='hash' style={{borderBottomRightRadius: '10px', borderTopRightRadius: '10px'}}>Hora</th>
-                    </tr>
-                  </thead>
+            <Posts postagens={postagensAtual} carregando={carregando} />
+            <Paginacao postagensPerPage={postagensPerPage} totalPosts={postagens.length} paginar={paginar} />
 
-                  <tbody>
-                      <tr>
-                              <td style={{color: 'black'}}>#hashtagname</td>
-                              <td>25/02</td>
-                              <td>09:30</td>
-                          
-                      </tr>
-                  </tbody>       
-              </table> 
-            </div> 
-        </div>
-      );
-    }
+    </div>
+   )
+}
 
-   /* componentDidMount(){
-      console.log('componente carregado!')
-      //console.log(this.props.location.search)
-      let params = new URLSearchParams(this.props.location.search)
-      console.log('Perfil buscado:' + params.get('profile'))
-    
-      fetch('https://api.airtable.com/v0/appVIbIe3dgo7JRR8/Buscas?' + )
-      //https://api.twitter.com/1.1/search/tweets.json?q=
-      
-    } */
-  }
-  
-  
+
+/*
+// Faz a busca dos dados quando carrega o componente
+componentDidMount() {
+    this.buscaApi()
+}
+
+    buscaApi = async () => {
+    const response = await Axios.get(`https://api.airtable.com/v0/appVIbIe3dgo7JRR8/Buscas?api_key=keynmzEKs3B99kRBy&maxRecords=10`)
+    await this.setState({ lista: response.data.records})
+    await this.separar(response.data.records, 10)
+    console.log(response.data.records)
+}
+   
+
+
+componentDidMount(){ 
+console.log('componente carregado!')
+console.log(this.props.location.search)
+let params = new URLSearchParams(this.props.location.search)
+console.log('Perfil buscado:' + params.get('q'))
+fetch('https://api.twitter.com/1.1/search/tweets.json?q=')
+
+fetch('https://api.airtable.com/v0/appVIbIe3dgo7JRR8/Buscas?' + )
+https://api.twitter.com/1.1/search/tweets.json?q=
+
+} */
+
+
 
 export default Tabela
-

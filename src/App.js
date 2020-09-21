@@ -5,12 +5,9 @@ import Busca from './pages/busca/busca'
 import Tabela from './pages/tabela/tabelabusca'
 
 
-//import Tabelabuscacss from './tabelabusca.css'
-//import MyHeader from './componentes/Myheader'
-//import MyTable from './componentes/MyTable'
-
 function App() {
     return (
+      
     <Router>
         <Switch>
             

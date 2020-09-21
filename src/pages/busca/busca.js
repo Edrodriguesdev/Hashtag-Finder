@@ -1,25 +1,21 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import axios from 'axios'
 
-class Busca extends React.Component {
-    constructor (props) {
-        super()
-        this.state = {value: ''};
-    }
 
+
+export default class PersonList extends React.Component {
+  
     render() {
-        return (
-            <div>
-                <label>
-                    Busca:
-                </label>
-                <form>
-                    <input type="text" value={this.state.value} />
-                </form>
-                <input type="submit" placeholder="Trazer dados" />
-            </div>
-        )
+      return (
+        <div>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Person Name:
+              <input type="text" name="name" onChange={this.handleChange} />
+            </label>
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      )
     }
-}
-
-export default Busca
+  }

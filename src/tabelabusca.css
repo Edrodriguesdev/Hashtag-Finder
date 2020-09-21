@@ -126,6 +126,26 @@ margin-top: 2%;
    
 }
 
+.paginacao {
+    width: 50%;
+    list-style: none ;
+    display: inline-flex;
+    padding-left: 40%;
+    color: #fff;
+    
+}
+
+.paginacao li{
+    padding: 2%;
+    text-decoration: none;
+}
+
+.linkPagina a{
+    text-decoration: none;
+    color: #fff;
+    
+}
+
 .home {
 
     text-align: center;
