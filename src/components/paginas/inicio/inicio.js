@@ -5,6 +5,7 @@ import PlanoDeFundo from '../inicio/PlanoDeFundo';
 import BarraDePesquisa from '../inicio/BarraDePesquisa';
 import MensagemErro from '../inicio/MensagemErro';
 import Carrossel from './Carrossel';
+import Management from '../inicio/Management';
 
 class Inicio extends React.Component {
     render (){
@@ -14,6 +15,7 @@ class Inicio extends React.Component {
             <PlanoDeFundo/>
             <BarraDePesquisa/>
             <Carrossel/>
+            <Management/>
             <MensagemErro/>
             <Rodape/>
         </section>
