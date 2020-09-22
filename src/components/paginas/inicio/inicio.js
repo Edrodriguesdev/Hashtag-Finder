@@ -4,6 +4,7 @@ import Rodape from '../comum/Rodape';
 import PlanoDeFundo from '../inicio/PlanoDeFundo';
 import BarraDePesquisa from '../inicio/BarraDePesquisa';
 import MensagemErro from '../inicio/MensagemErro';
+
 import Carrossel from './Carrossel';
 import Management from '../inicio/Management';
 
