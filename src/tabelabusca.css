@@ -131,23 +131,25 @@ margin-top: 2%;
     list-style: none ;
     display: inline-flex;
     padding-left: 40%;
-    color: #fff;
-    
+    border-radius: 70%;
 }
 
-.paginacao li{
-    padding: 2%;
+.linkPagina {
+    padding: 6px 10px;
+    line-height: 20px;
     text-decoration: none;
+    background-color: #fff;
+    color: #3633F7;
+    border-radius: 70%;
+   
 }
 
-.linkPagina a{
-    text-decoration: none;
-    color: #fff;
-    
-}
+
+.linkPagina:hover {
+    color: hotpink;
+  }
 
 .home {
-
     text-align: center;
     width: 85px;
     height: 20px;

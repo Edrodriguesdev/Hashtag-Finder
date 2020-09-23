@@ -5,6 +5,23 @@ import Axios from 'axios'
 import Posts from '../../componentes/Posts'
 import Paginacao from '../../componentes/paginacao'
 
+function RequisicaoPost() {
+    const [itemId, setArticleId] = useState();
+
+    useEffect(() => {
+        
+        const dados_postados = { "records":[{"fields":{"Hashtag":"ultimohashtag","Data":"01/14","Hora":"01:14"}}] };
+        Axios.post('https://api.airtable.com/v0/appVIbIe3dgo7JRR8/Buscas?api_key=keynmzEKs3B99kRBy', dados_postados)
+            .then(response => setArticleId(response.data.id));
+    
+    }, []);
+
+    return (
+        <div>
+            <RequisicaoPost />
+        </div>
+    );
+}
 
 const Tabela = () => {
     const [postagens, setPostagens] = useState([]);
@@ -29,14 +46,11 @@ const Tabela = () => {
 
     const paginar = numPaginas => setPaginaAtual(numPaginas);
 
-
-
     return (
     <div>
         <Header />
             <Posts postagens={postagensAtual} carregando={carregando} />
             <Paginacao postagensPerPage={postagensPerPage} totalPosts={postagens.length} paginar={paginar} />
-
     </div>
    )
 }
@@ -54,21 +68,8 @@ componentDidMount() {
     await this.separar(response.data.records, 10)
     console.log(response.data.records)
 }
-   
 
-
-componentDidMount(){ 
-console.log('componente carregado!')
-console.log(this.props.location.search)
-let params = new URLSearchParams(this.props.location.search)
-console.log('Perfil buscado:' + params.get('q'))
-fetch('https://api.twitter.com/1.1/search/tweets.json?q=')
-
-fetch('https://api.airtable.com/v0/appVIbIe3dgo7JRR8/Buscas?' + )
-https://api.twitter.com/1.1/search/tweets.json?q=
 
 } */
-
-
 
 export default Tabela
