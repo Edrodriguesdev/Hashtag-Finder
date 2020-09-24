@@ -1,14 +1,53 @@
 {
+<<<<<<< HEAD
   "name": "hashtagfinder",
+=======
+<<<<<<< HEAD
+  "name": "hashtagfinder",
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "name": "hashtagfinder",
+=======
+  "name": "app",
+>>>>>>> 601b49ca0f4008a3af40c3db93dd7193382754d6
+=======
+  "name": "hashtagfinder",
+>>>>>>> Pagina-inicial
+>>>>>>> 15a0d3fc392d0818b872e7d24c4a5504a2d3766d
+>>>>>>> Pagina-Tabela-de-Busca
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
+<<<<<<< HEAD
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-infinite-scroller": "^1.2.4",
+    "react-router-dom": "^5.2.0",
+=======
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.20.0",
+    "pure-react-carousel": "^1.27.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "react-router-dom": "^5.2.0",
+=======
+>>>>>>> 601b49ca0f4008a3af40c3db93dd7193382754d6
+>>>>>>> 15a0d3fc392d0818b872e7d24c4a5504a2d3766d
     "react-scripts": "3.4.3"
+=======
+    "react-elastic-carousel": "^0.7.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.2.0"
+>>>>>>> Pagina-inicial
   },
   "scripts": {
     "start": "react-scripts start",
