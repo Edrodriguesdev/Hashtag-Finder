@@ -1,9 +1,10 @@
 import React,  {useState, useEffect} from 'react'
-import Header from '../../componentes/header'
+import Header from '../../components/header'
+import Posts from '../../components/Posts'
+import Paginacao from '../../components/paginacao'
 import '../../tabelabusca.css'
 import Axios from 'axios'
-import Posts from '../../componentes/Posts'
-import Paginacao from '../../componentes/paginacao'
+
 
 function RequisicaoPost() {
     const [itemId, setArticleId] = useState();
