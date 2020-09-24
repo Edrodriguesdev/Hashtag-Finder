@@ -7,5 +7,9 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+<<<<<<< HEAD
+=======
+
+>>>>>>> Pagina-inicial
   document.getElementById('root')
 );

@@ -47,7 +47,11 @@ body{
     top: 0;
     right: 0;
     background:rgba(255, 255, 255, 0.4);
+<<<<<<< HEAD
     backdrop-filter: blur(10px);
+=======
+    backdrop-filter: blur(45px);
+>>>>>>> Pagina-inicial
     z-index: 1;
 }
 .menuSupDesf .linktitulo {
@@ -353,7 +357,11 @@ body{
         top: 0;
         right: 0;
         background:rgba(255, 255, 255, 0.4);
+<<<<<<< HEAD
         backdrop-filter: blur(20px);
+=======
+        backdrop-filter: blur(45px);
+>>>>>>> Pagina-inicial
         z-index: 1;
     }
     #linktituloDesf{
